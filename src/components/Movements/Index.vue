@@ -1,7 +1,31 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
-  <div class="movements">Movements</div>
+  <div class="movements">
+    <h2 class="title">Historial</h2>
+    <div class="content">
+      <Movement
+        v-for="movement of movements"
+        :key="movement.id"
+        :title="movement.title"
+      />
+    </div>
+  </div>
 </template>
+
+<script setup>
+import { defineProps, toRefs } from "vue";
+import Movement from "./Movement.vue";
+
+const props = defineProps({
+  movements: {
+    type: Array,
+    default: () => [],
+    required: true,
+  },
+});
+
+const { movements } = toRefs(props);
+</script>
 
 <style scoped>
 .movements {
