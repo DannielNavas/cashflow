@@ -1,7 +1,37 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
-  <main>Resumen</main>
+  <main>
+    <p>{{ label }}</p>
+    <h1>{{ amountVisual }}</h1>
+  </main>
 </template>
+
+<script>
+export default {
+  // eslint-disable-next-line vue/multi-word-component-names
+  name: "Resume",
+  props: {
+    label: {
+      type: String,
+      required: true,
+    },
+    totalAmount: {
+      type: Number,
+      required: true,
+    },
+    amount: {
+      type: Number,
+      required: false,
+      defauld: null,
+    },
+  },
+  computed: {
+    amountVisual() {
+      return this.amount > 0 ? this.amount : this.totalAmount;
+    },
+  },
+};
+</script>
 
 <style scoped>
 main {

@@ -5,7 +5,7 @@
       <Header></Header>
     </template>
     <template #resume>
-      <Resume></Resume>
+      <Resume :label="title" :amount="amount" :total-amount="10000000" />
     </template>
     <template #movements>
       <Movements></Movements>
@@ -27,6 +27,16 @@ export default {
     Header,
     Resume,
     Movements,
+  },
+  data() {
+    return {
+      amount: 1,
+    };
+  },
+  computed: {
+    title() {
+      return this.amount > 0 ? "Disponible" : "Ahoro total";
+    },
   },
 };
 </script>
