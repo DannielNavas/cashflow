@@ -5,7 +5,15 @@
       <Header></Header>
     </template>
     <template #resume>
-      <Resume :label="title" :amount="amount" :total-amount="10000000" />
+      <Resume :label="title" :amount="amount" :total-amount="10000000">
+        <template #graphic>
+          <!-- <img src="@/assets/Graphic.svg" alt="Graphic" /> -->
+          Grafica
+        </template>
+        <template #action>
+          <button class="button">Ver todos</button>
+        </template>
+      </Resume>
     </template>
     <template #movements>
       <Movements></Movements>
@@ -30,7 +38,7 @@ export default {
   },
   data() {
     return {
-      amount: 1,
+      amount: 0,
     };
   },
   computed: {
