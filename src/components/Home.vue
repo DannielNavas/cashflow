@@ -11,7 +11,7 @@
           Grafica
         </template>
         <template #action>
-          <button class="button">Ver todos</button>
+          <Action />
         </template>
       </Resume>
     </template>
@@ -24,6 +24,7 @@
 <script>
 import Header from "@/components/Header.vue";
 import Layaout from "@/components/Layout.vue";
+import Action from "./Action.vue";
 import Movements from "./Movements/Index.vue";
 import Resume from "./Resume/Index.vue";
 
@@ -35,6 +36,7 @@ export default {
     Header,
     Resume,
     Movements,
+    Action,
   },
   data() {
     return {
