@@ -7,8 +7,7 @@
     <template #resume>
       <Resume :label="title" :amount="amount" :total-amount="10000000">
         <template #graphic>
-          <!-- <img src="@/assets/Graphic.svg" alt="Graphic" /> -->
-          Grafica
+          <Graphic :amounts="amounts" />
         </template>
         <template #action>
           <Action />
@@ -26,6 +25,7 @@ import Header from "@/components/Header.vue";
 import Layaout from "@/components/Layout.vue";
 import Action from "./Action.vue";
 import Movements from "./Movements/Index.vue";
+import Graphic from "./Resume/Graphic.vue";
 import Resume from "./Resume/Index.vue";
 
 export default {
@@ -37,10 +37,12 @@ export default {
     Resume,
     Movements,
     Action,
+    Graphic,
   },
   data() {
     return {
       amount: 0,
+      amounts: [1000, 500, -100, 1000, 1000],
       movements: [
         {
           id: 1,
