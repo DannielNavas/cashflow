@@ -56,6 +56,16 @@ const title = ref("");
 const description = ref("");
 const amount = ref(0);
 const type = ref("");
+
+const submit = () => {
+  console.log({
+    title: title.value,
+    description: description.value,
+    amount: amount.value,
+    type: type.value,
+  });
+  showModal.value = false;
+};
 </script>
 
 <style scoped>
