@@ -24,10 +24,10 @@
       <line
         v-show="showPointer"
         stroke="#04b500"
-        stroke-witdh="2"
+        stroke-width="2"
         :x1="pointer"
         y1="0"
-        :x2="pinter"
+        :x2="pointer"
         y2="200"
       />
     </svg>
