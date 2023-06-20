@@ -42,7 +42,7 @@ export default {
   data() {
     return {
       amount: 0,
-      amounts: [1000, 500, -100, 1000, 1000],
+      amounts: [1000, -500, -100, -500, 1000],
       movements: [
         {
           id: 1,
