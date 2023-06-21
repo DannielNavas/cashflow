@@ -60,12 +60,6 @@ const type = ref("");
 const emit = defineEmits(["create"]);
 
 const submit = () => {
-  console.log({
-    title: title.value,
-    description: description.value,
-    amount: amount.value,
-    type: type.value,
-  });
   emit("create", {
     title: title.value,
     description: description.value,
